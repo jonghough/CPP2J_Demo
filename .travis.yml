@@ -2,19 +2,7 @@ language: cpp
 
 compiler:
   - gcc
-  
-addons:
-  apt:
-    packages:
-      - libsdl2-dev
-      - libsdl2-image-dev
-
-before_install:
-  - sudo apt-get update 
-  - sudo apt-get install libsdl2-dev libsdl2-image-dev
-
-
-
+ 
 branches:
   only:
     - master
