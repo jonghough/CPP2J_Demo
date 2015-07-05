@@ -38,3 +38,5 @@ to rotate rows:
 `arr =:( 1 |. 0 {"2 arr) 0 }"2 arr`
 
 By allowing some of the logic to be performed in J, development speed can be increased. For example, this may be useful in prototyping, and is not limited to games.
+
+To call procedures from the libj.so shared library, dlopen must be used on Linux systems.
