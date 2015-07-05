@@ -6,7 +6,8 @@ compiler:
 before_install:
   - echo $LANG
   - echo $LC_ALL
-  - sudo apt-get update && sudo apt-get install libsdl2-dev libsdl2-image-dev
+  - sudo apt-get update 
+  - sudo apt-get install libsdl2-dev libsdl2-image-dev
 
 
 
