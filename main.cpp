@@ -85,11 +85,11 @@ int main ( int argc, char** argv )
 	SDL_Surface* y;
 	SDL_Surface* g;
 
-	r = IMG_Load("red.png");
-	w = IMG_Load("white.png");
-	b = IMG_Load("blue.png");
-	y = IMG_Load("yellow.png");
-	g = IMG_Load("green.png");
+	r = IMG_Load("images/red.png");
+	w = IMG_Load("images/white.png");
+	b = IMG_Load("images/blue.png");
+	y = IMG_Load("images/yellow.png");
+	g = IMG_Load("images/green.png");
 
 	if (!r || !w || !b || !y || !g)
 	{
@@ -178,7 +178,7 @@ int main ( int argc, char** argv )
 				else if(k == 2) pic = w;
 				else if(k == 3) pic = y;
 				else pic = g; 
-				int res=   SDL_BlitSurface(pic, 0, screen, &dstrect);
+				SDL_BlitSurface(pic, 0, screen, &dstrect);
 			}
 			dstrect.y +=r->h;
 		}
