@@ -195,8 +195,17 @@ int main ( int argc, char** argv )
 	SDL_FreeSurface(g);
 	SDL_FreeSurface(w);
 	SDL_FreeSurface(y);
+	for(int i = 0; i < 5; i++){
+		free(grid[i]);
+	}
 	free(grid);
-	//
+	for(int i = 0; i < 4;i++){
+		free(pt[i]);
+	}
+	free(pt);
+	free(jStruct);
+
+	//free J instance
 	jFree(jdll, jInstance);
 	// exit
 	printf("Exited cleanly\n");

@@ -30,7 +30,7 @@ bool didWin(int * jdll, int instance){
 	int ctr = 0;
 	for(ctr=0;ctr<4;ctr++)
 	{
-		pt[ctr]=(int *)malloc(sizeof(int*));
+		pt[ctr]=(int *)malloc(sizeof(int));
 	}
 	jGetM(jdll, instance, "win", &winStruct, pt);
 

@@ -25,12 +25,11 @@ int setupJInstance(int* jdll, int jInstance){
 	jget =  (int (*)(int, const char *, int*,int*,int*,int*))dlsym(jdll, "JGetM");
 	jfree = (int (*)(int))dlsym(jdll,"JFree");
 
-	
+
 	return jInstance;
 }
 
 int jDo(int * jdll, int instance, const char * executeCommand){
-
 	//===================JDO=======================
 	jdo(instance, executeCommand);
 
@@ -57,17 +56,18 @@ int jGetM(int * jdll, int instance, const char * valueToGet, JStruct* jStruct, i
 	}
 
 	int* jvals = pt[3];
-	
+
 	jStruct->jRank = jrank;
 	jStruct->jShape = jshape;
 	jStruct->jData = ((int *)jvals[0]);
 
-	
+
 	return res;
 }
 
 
 int jFree(int* jdll, int instance){
+	//================JFREE=======================
 	int f = jfree(instance);
 	cout << "Free instance "<< instance;
 	return f;
